@@ -30,7 +30,7 @@ with st.expander("🧭 ¿Cómo funciona PsicologIA? Haz clic aquí"):
     """)
 
 # Formulario personalizado
-nombre_usuario = st.text_input("👤 ¿Cómo te llamas?", max_chars=30)
+nombre_usuario = st.text_input("👤 ¿Cómo te llamas?, ó dime ¿cómo quieres que te llame?.", max_chars=30)
 user_input = st.text_area("✍️ ¿Qué te gustaría explorar hoy?", height=250)
 
 if st.button("🧩 Iniciar Análisis Profundo"):
