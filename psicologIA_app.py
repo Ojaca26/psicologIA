@@ -5,7 +5,7 @@ import google.generativeai as genai
 genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
 
 # Configurar modelo Gemini
-model = genai.GenerativeModel("gemini-2.5-pro")
+model = genai.GenerativeModel("gemini-2.5-flash")
 
 # Prompt base cargado del archivo
 with open("psicologIA.txt", "r", encoding="utf-8") as f:
@@ -76,5 +76,6 @@ Pregunta: {pregunta}
                 respuesta_pregunta = model.generate_content(prompt_pregunta)
                 st.success("🗣️ Respuesta del profesional:")
                 st.markdown(respuesta_pregunta.text)
+
 
 
